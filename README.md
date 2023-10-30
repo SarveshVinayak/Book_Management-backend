@@ -1,4 +1,4 @@
-### Description
+# Description
 
 This is a NodeJS backend repo for Books Managament RESTful APIs using MongoDB, Express, Passport, JWT etc.
 
@@ -35,7 +35,7 @@ This is a NodeJS backend repo for Books Managament RESTful APIs using MongoDB, E
    Book deletion API to delete a book, It takes 1 parameter i.e. id.
    If the id is incorrect, then the API throws an error that the Book doesn't exist.
 
-# Note: All the APIs under /user/books require bearer token for authentication
+### Note: All the APIs under /user/books require bearer token for authentication
 
 ## Installation
 
