@@ -22,11 +22,8 @@ const JOI = {
   PAGE: Joi.number().default(0),
   SEARCH: Joi.string().allow("").replace("(", "\\(").replace(")", "\\)"),
   OBJECTID: Joi.string().custom(objectId).required(),
-  DEVICE_TYPE: Joi.string()
-    .valid(...Object.values(DEVICE_TYPE))
-    .required(),
   ROLE: Joi.string()
-    .valid(...Object.values(USER_TYPE))
+    .valid(...Object.values(ROLE))
     .required(),
   BOOLEAN: Joi.boolean().required(),
 };

@@ -11,7 +11,7 @@ export const signup = async (email, password, name) => {
     );
   }
 
-  password = bcrypt.hash(password, 8);
+  password = await bcrypt.hash(password, 8);
 
   const user = await Users.create({
     name,
@@ -19,7 +19,7 @@ export const signup = async (email, password, name) => {
     password,
   });
 
-  return user;
+  return user.toObject();
 };
 
 export const login = async (email, password) => {

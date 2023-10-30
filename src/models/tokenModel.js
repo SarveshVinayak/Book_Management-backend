@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { TOKEN_TYPE, DEVICE_TYPE, ROLE } from "../config/appConstants.js";
+import { TOKEN_TYPE, ROLE } from "../config/appConstants.js";
 
 const tokenSchema = new mongoose.Schema(
   {
@@ -16,10 +16,6 @@ const tokenSchema = new mongoose.Schema(
       required: true,
     },
     expires: { type: Date, required: true },
-    device: {
-      type: { type: String, enum: [...Object.values(DEVICE_TYPE)] },
-      token: { type: String },
-    },
     isDeleted: { type: Boolean, default: false, required: true },
     blacklisted: {
       type: Boolean,
